@@ -176,7 +176,7 @@ function App() {
             </tr>
             <tr>
               <td>28+</td>
-              <td>Performance enhancers highly likely - extreme amount of muscle mass indicative of drug enhancements</td>
+              <td>Performance enhancers highly likely - extreme amount of muscle mass indicative of muscle enhancements</td>
             </tr>
           </tbody>
         </table>
@@ -227,6 +227,25 @@ function App() {
     <div className = "barChartContainer">
       <div className = "barChartTitle">BMI Distribution</div>
       <BmiChart bmiValue = {bmi} />
+    </div>
+
+    <div className = "infoContainer">
+      <div className = "infoTitle1">Difference Between FFMI and BMI</div>
+      <div className = "infoSection1">
+        The Fat Free Mass Index (FFMI) is a tool used to measure the body's amount of muscle mass relative to the height and weight. To do this, the calculator requires an approximation
+        of the user's body fat percentage. The Body Mass Index (BMI) is a tool used to measure the body's height to weight ratio. It only requires the user's height and weight. The key 
+        difference between the two is that the FFMI factors in body composition, whereas the BMI only deals with the ratio. In other words, BMI does not factor in how much muscle mass 
+        a person may have on their frame. Athletes or bodybuilders who carry more muscle mass may fall within higher ranges on the BMI scale, although in a medical context they would 
+        not be considered to be at an unhealthy weight. However, the FFMI is most accurate amongst users that have a low enough body fat percentage to be accurately reported. This value
+        usually extends up to 20%. Users that have a substantial amount of body fat percentage may have difficulty approximating their body fat percentage and thus provide inaccurate
+        values. 
+      </div>
+      <div className = "infoTitle2">What the Charts Say</div>
+      <div className = "infoSection2">
+        The graphs displayed help the user visualize their current FFMI/BMI score in comparison to the general adult population in the United States. In the FFMI bell curve, the majority of 
+        the population scores within the range of 18 to 20, indicating average muscle mass. In the BMI bar chart, 7.2% of the population scores a BMI below 18.5, 35% of the population sores 
+        a BMI between 18.5 and 24.9, 33% of the population scores a BMI between 25 and 29.9, and 24.8% of the population scores a BMI above 30.  
+      </div>
     </div>
   </div>
     

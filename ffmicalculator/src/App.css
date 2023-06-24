@@ -247,3 +247,27 @@ thead {
   display: flex;
   justify-content: center;
 }
+
+.infoContainer {
+  margin-top: 4em;
+  height: 50vh;
+}
+
+.infoTitle1 {
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+.infoSection1 {
+  line-height: 1.5;
+}
+
+.infoTitle2 {
+  margin-top: 2em;
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+.infoSection2 {
+  line-height: 1.5;
+}
