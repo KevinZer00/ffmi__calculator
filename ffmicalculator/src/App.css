@@ -1,3 +1,8 @@
+body {
+  background-color: #253142; /* GitHub dark theme background color */
+  color: #c9d1d9; /* Text color for better contrast */
+}
+
 .App {
   margin-left: 15em;
   margin-right: 15em;
@@ -14,13 +19,26 @@
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
+
+}
+.ffmiSection {
+  -webkit-box-shadow: -10px 10px 0px 0px rgba(106,183,242,1);
+-moz-box-shadow: -10px 10px 0px 0px rgba(106,183,242,1);
+box-shadow: -10px 10px 0px 0px rgba(106,183,242,1);
+}
+
+.bmiSection {
+  -webkit-box-shadow: -10px 10px 0px 0px rgba(106,183,242,1);
+-moz-box-shadow: -10px 10px 0px 0px rgba(106,183,242,1);
+box-shadow: -10px 10px 0px 0px rgba(106,183,242,1);
 }
 
 .ffmiSection,
 .bmiSection {
+  border-radius: 10px;
   width: 35vw;
-  border: 1px solid #ccc;
-  padding: 20px;
+  border: 2px solid rgba(106,183,242,1);;
+  padding: 10px;
 }
 
 .sectionHeader {
@@ -33,6 +51,7 @@
 .calculateBMIContainer {
   text-align: center;
   margin-top: 20px;
+  
 }
 
 .calculateFFMI,
@@ -53,13 +72,20 @@ input[type="number"] {
   padding: 10px;
   font-size: 18px;
   margin-bottom: 1em;
+  background-color: #c9d1d9;
+  border-radius: 10px;
+  border: none;
 }
+
 
 select {
   margin-left: 1em;
   width: 10%;
   padding: 5px;
   font-size: 22px;
+  background-color: #c9d1d9;
+  border-radius: 10px;
+  border: none;
 }
 
 .logo1 {
@@ -73,9 +99,50 @@ select {
 }
 
 button {
+  position: relative;
   border-radius: 20px;
   font-size: 16px;
+  background-color: #c9d1d9;
+  border: none;
+  overflow: hidden;
 }
+
+button {
+  position: relative;
+  border-radius: 20px;
+  font-size: 16px;
+  background-color: #c9d1d9;
+  border: none;
+  overflow: hidden;
+  color: black; 
+}
+
+button {
+  position: relative;
+  border-radius: 20px;
+  font-size: 16px;
+  background-color: #c9d1d9;
+  border: none;
+  color: black;
+  overflow: hidden;
+}
+
+button {
+  border-radius: 20px;
+  font-size: 16px;
+  background-color: #c9d1d9;
+  border: none;
+  color: black;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+  background-color: #4287f5;
+  color: white;
+}
+
+
+
 
 .ffmi {
   font-size: 20px;
@@ -94,4 +161,89 @@ button {
 .bmi {
   font-size: 20px;
   text-decoration: underline;
+}
+
+.tables {
+  display: flex;
+}
+
+
+table {
+  margin-top: 2em;
+  margin-right: 4em;
+  border-collapse: collapse;
+  width: 35vw;
+}
+
+td {
+  padding: 15px;
+}
+
+
+td:nth-child(1) {
+  width: 5em;
+  border-right: 2px solid rgba(106,183,242,1);
+  border-bottom: 2px solid rgba(106,183,242,1); 
+}
+
+td:nth-child(2) {
+  word-wrap: break-word;
+  border-bottom: 2px solid rgba(106,183,242,1);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+thead {
+  text-decoration: underline;
+}
+
+.table {
+  border-collapse: collapse;
+}
+
+.light-mode {
+  body {
+    background-color: white;
+  }
+}
+
+.bellCurvesContainer {
+  height: 50vh;
+  margin-top: 2em;
+}
+
+.bellCurvesTitle {
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.bellCurve {
+  height: 30em;
+  display: flex;
+  justify-content: center;
+}
+
+.genderInput { 
+  width: 75em;
+}
+
+.barChartContainer {
+  height: 50vh;
+  margin-top: 2em;
+}
+
+
+.barChartTitle {
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.bmiBarChart {
+  height: 30em;
+  display: flex;
+  justify-content: center;
 }
