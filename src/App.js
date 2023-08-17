@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState} from 'react';
 import Height from './Height';
 import Weight from './Weight';
 import BodyFat from './BodyFat';
-import BMI from './BMI';
+// import BMI from './BMI';
 import GenderInput from './GenderInput';
 import BellCurveChartMen from './BellCurveChartMen';
 import BellCurveChartWomen from './BellCurveChartWomen';
