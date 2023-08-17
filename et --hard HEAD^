@@ -1,0 +1,54 @@
+[33mcommit 54f8b1e28ffb737da1c9d7f3f9e0faf36e89f42a[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Kevin Yu <kevinyuzer0@gmail.com>
+Date:   Fri Aug 11 00:48:26 2023 -0700
+
+    Added responsiveness
+
+[33mcommit 432a9e8765a3cba8c520d0b94411b9318e6f8c4b[m
+Author: KevinZer00 <58315100+KevinZer00@users.noreply.github.com>
+Date:   Fri Aug 11 00:45:21 2023 -0700
+
+    Delete ffmicalculator directory
+
+[33mcommit 49f3b2fe1aff2834c9c9894ab832d35f06cca7af[m
+Merge: ba8fcc0b e40a352c
+Author: Kevin Yu <kevinyuzer0@gmail.com>
+Date:   Fri Aug 11 00:41:59 2023 -0700
+
+    Merge branch 'main' of https://github.com/KevinZer00/ffmi__calculator
+
+[33mcommit ba8fcc0bf5e6d0c560fff38e6820107b0a489a1f[m
+Author: Kevin Yu <kevinyuzer0@gmail.com>
+Date:   Fri Aug 11 00:38:17 2023 -0700
+
+    Added responsiveness
+
+[33mcommit 0db39223c5a7f18f52b67893b6df4a1a16bd13c9[m
+Author: Kevin Yu <kevinyuzer0@gmail.com>
+Date:   Fri Jun 23 23:51:36 2023 -0700
+
+    FFMI/BMI Calculator With Graphs
+
+[33mcommit e40a352ca970d7f8418e3826def93ed62584c616[m
+Author: KevinZer00 <58315100+KevinZer00@users.noreply.github.com>
+Date:   Fri Jun 23 23:37:16 2023 -0700
+
+    Update README.md
+
+[33mcommit 60422d726622159cce4ad8ab23208eb33e87673b[m
+Author: KevinZer00 <58315100+KevinZer00@users.noreply.github.com>
+Date:   Fri Jun 23 23:36:30 2023 -0700
+
+    Update README.md
+
+[33mcommit 82ada7040e23a5c801f984f1bf57c5961c8a85d7[m
+Author: Kevin Yu <kevinyuzer0@gmail.com>
+Date:   Fri Jun 23 22:53:12 2023 -0700
+
+    FFMI/BMI Calculator With Graphs
+
+[33mcommit 4d8e50daaedc5393b574a995343456afe36befb8[m
+Author: Kevin Yu <kevinyuzer0@gmail.com>
+Date:   Thu Jun 15 16:46:12 2023 -0700
+
+    Initial commit
