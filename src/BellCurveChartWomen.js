@@ -26,16 +26,16 @@ const BellCurveChartWomen = ({ adjustedFFMI }) => {
     };
 
     const initializeChart = () => {
-      destroyChart(); // Destroy existing chart instance
+      destroyChart(); //destroy existing chart instance
 
       const ctx = chartRef.current.getContext('2d');
 
-      const mean = 18; // Replace with actual mean value for female
-      const standardDeviation = 2.5; // Replace with actual standard deviation value for female
+      const mean = 18; 
+      const standardDeviation = 2.5; 
 
       const bellCurveData = generateBellCurveData(mean, standardDeviation);
 
-      const adjustedDataIndex = bellCurveData.findIndex((data) => data.x >= adjustedFFMI); // Find the index of the data point with x >= adjustedFFMI
+      const adjustedDataIndex = bellCurveData.findIndex((data) => data.x >= adjustedFFMI); //find the index of the data point with x >= adjustedFFMI
 
       const chartConfig = {
         type: 'line',
@@ -60,7 +60,7 @@ const BellCurveChartWomen = ({ adjustedFFMI }) => {
               pointBackgroundColor: 'rgba(54, 162, 235, 1)',
               pointBorderColor: 'rgba(54, 162, 235, 1)',
               pointRadius: 10,
-              pointHoverRadius: 15, // Increase the hover radius to make the point appear over the line
+              pointHoverRadius: 15, 
             },
           ],
         },
@@ -76,8 +76,8 @@ const BellCurveChartWomen = ({ adjustedFFMI }) => {
                 display: true,
                 text: 'FFMI',
               },
-              min: mean - 3 * standardDeviation, // Adjust the min value based on the data range
-              max: mean + 3 * standardDeviation, // Adjust the max value based on the data range
+              min: mean - 3 * standardDeviation,
+              max: mean + 3 * standardDeviation, 
             },
             y: {
               type: 'linear',
@@ -86,7 +86,7 @@ const BellCurveChartWomen = ({ adjustedFFMI }) => {
                 display: true,
                 text: 'Probability Density',
               },
-              min: 0, // Adjust the min value based on the data range
+              min: 0, 
             },
           },
           plugins: {
@@ -96,7 +96,7 @@ const BellCurveChartWomen = ({ adjustedFFMI }) => {
                 },
             },
           },
-          animation: false, // Disable animation for the initial rendering
+          animation: false,
         },
       };
 

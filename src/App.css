@@ -1,8 +1,8 @@
 
-/* Existing styles */
+
 body {
-  background-color: #253142; /* GitHub dark theme background color */
-  color: #c9d1d9; /* Text color for better contrast */
+  background-color: #253142; 
+  color: #c9d1d9;
 }
 
 .App {
@@ -230,7 +230,7 @@ thead {
 
 .barChartContainer {
   height: 50vh;
-  margin-top: 2em;
+  margin-top: 7em;
 }
 
 
@@ -270,11 +270,11 @@ thead {
   line-height: 1.5;
 }
 
-/* Mobile responsive styles for screens of width 400px or less */
+
 @media (max-width: 500px) {
 
     body {
-        font-size: 14px; /* Adjusting font size for mobile */
+        font-size: 14px; 
         overflow-x: hidden;
     }
 
@@ -284,37 +284,37 @@ thead {
     }
 
     .logo {
-        font-size: 24px; /* Reducing font size for mobile */
+        font-size: 24px;
         padding: 5px;
     }
 
     .calculators {
-        flex-direction: column; /* Stacking calculators vertically on mobile */
+        flex-direction: column; 
     }
 
     .ffmiSection, .bmiSection {
-        width: 95%; /* Taking almost full width on mobile */
-        box-shadow: none; /* Removing box shadow for simplicity on mobile */
+        width: 95%; 
+        box-shadow: none; 
     }
 
     .sectionHeader {
-        font-size: 16px; /* Adjusting font size for mobile */
+        font-size: 16px;
     }
 
     input, textarea, select {
-      font-size: 14px; /* Adjusting font size for input fields on mobile */
+      font-size: 14px; 
     }
 
     input::placeholder, textarea::placeholder {
-      font-size: 12px; /* Adjusting font size for placeholder text in input fields on mobile */
+      font-size: 12px; 
     }
 
     input[type="text"], input[type="number"], textarea {
-      width: 50%; /* Expanding the width of text input fields on mobile */
+      width: 50%; 
     }
 
     select {
-      width: 5em; /* Expanding the width of dropdown menus on mobile */
+      width: 5em; 
     }
 
     .ffmichart, .bmichart {

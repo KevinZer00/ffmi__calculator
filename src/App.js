@@ -2,7 +2,6 @@ import React, { useState} from 'react';
 import Height from './Height';
 import Weight from './Weight';
 import BodyFat from './BodyFat';
-// import BMI from './BMI';
 import GenderInput from './GenderInput';
 import BellCurveChartMen from './BellCurveChartMen';
 import BellCurveChartWomen from './BellCurveChartWomen';
@@ -22,57 +21,57 @@ function App() {
   const [bmi, setBMI] = useState(0);
   const [selectedGender, setSelectedGender] = useState('male');
 
-  // Function to handle height change
+  //function to handle height change
   const handleHeightChange = (value) => {
     setHeight(value);
   };
 
-  // Function to handle weight change
+  //function to handle weight change
   const handleWeightChange = (value) => {
     setWeight(value);
   };
 
-  // Function to handle body fat change
+  //function to handle body fat change
   const handleBodyFatChange = (value) => {
     setBodyFat(value);
   };
 
-  // Function to handle height unit change
+  //function to handle height unit change
   const handleHeightUnitChange = (value) => {
     setHeightUnit(value);
   };
 
-  // Function to handle weight unit change
+  //function to handle weight unit change
   const handleWeightUnitChange = (value) => {
     setWeightUnit(value);
   };
 
-   // Function to handle gender change
+   //function to handle gender change
    const handleGenderChange = (value) => {
     setSelectedGender(value);
   };
 
-  // Function to calculate FFMI
+  //function to calculate FFMI
   const calculateFFMI = () => {
     let heightInMeters = height;
     if (heightUnit === 'in') 
     {
-      heightInMeters = height * 0.0254; // Convert inches to meters
+      heightInMeters = height * 0.0254; //convert inches to meters
     } else if (heightUnit === 'cm') 
     {
-      heightInMeters = height / 100; // Convert centimeters to meters
+      heightInMeters = height / 100; //convert centimeters to meters
     }
 
     let weightInKg = weight;
     if (weightUnit === 'lbs') 
     {
-      weightInKg = weight * 0.453592; // Convert pounds to kilograms
+      weightInKg = weight * 0.453592; //convert pounds to kilograms
     }
 
-    // Calculate the Lean Body Mass (LBM)
+    //calculate the Lean Body Mass (LBM)
     const leanBodyMass = weightInKg * (1 - bodyFat / 100);
 
-    // Calculate the FFMI
+    //calculate the FFMI
     const ffmi = leanBodyMass / (heightInMeters * heightInMeters);
 
     setFFMIResult(ffmi);
@@ -92,19 +91,19 @@ function App() {
     setAdjFFMIResult(adjFFMI);
   };
 
-// Function to calculate BMI
+//function to calculate BMI
   const calculateBMI = () => {
     let heightInMeters = height;
     if (heightUnit === 'in') {
-      heightInMeters = (height * 0.0254); // Convert inches to meters
+      heightInMeters = (height * 0.0254); //convert inches to meters
     } else if (heightUnit === 'cm') {
-      heightInMeters = (height / 100); // Convert centimeters to meters
+      heightInMeters = (height / 100); //convert centimeters to meters
     }
 
     let weightInKg = weight;
     if (weightUnit === 'lbs') 
     {
-      weightInKg = weight * 0.453592; // Convert pounds to kilograms
+      weightInKg = weight * 0.453592; //convert pounds to kilograms
     }
 
     const bmi = weightInKg / (heightInMeters * heightInMeters);

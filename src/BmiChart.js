@@ -14,7 +14,7 @@ const BmiBarChart = ({ bmiValue }) => {
     };
 
     const initializeChart = () => {
-      destroyChart(); // Destroy existing chart instance
+      destroyChart(); //destroy existing chart instance
 
       const ctx = chartRef.current.getContext('2d');
 
@@ -29,7 +29,7 @@ const BmiBarChart = ({ bmiValue }) => {
         (category) => bmiValue >= category.min && bmiValue <= category.max
       );
 
-      const totalPopulation = 100; // Total population percentage
+      const totalPopulation = 100; //total population percentage
 
       const chartConfig = {
         type: 'bar',
@@ -38,10 +38,10 @@ const BmiBarChart = ({ bmiValue }) => {
           datasets: [
             {
               data: [
-                7.2,   // Percentage for "Underweight"
-                33,    // Percentage for "Normal Weight"
-                35,    // Percentage for "Overweight"
-                24.8,  // Percentage for "Obese"
+                7.2,   //percentage for underweight
+                33,    //percentage for normal weight 
+                35,    //percentage for overweight
+                24.8,  //percentage for obese
               ],
               backgroundColor: bmiCategories.map((category) =>
                 category.label === bmiCategory.label ? '#2196F3' : category.color
@@ -68,7 +68,7 @@ const BmiBarChart = ({ bmiValue }) => {
               min: 0,
               max: totalPopulation,
               ticks: {
-                stepSize: 10, // Adjust step size as needed
+                stepSize: 10, //adjust step size as needed
               },
             },
           },

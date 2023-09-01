@@ -1,11 +1,18 @@
+//import React and hooks
 import React, { useEffect, useRef } from 'react';
+//import Chart.js components
 import { Chart, LineController, LineElement, PointElement, LinearScale, Title, Tooltip } from 'chart.js';
+//register Chart.js components
 Chart.register(LineController, LineElement, PointElement, LinearScale, Title, Tooltip);
 
+//main React component for the bell curve chart
 const BellCurveChartMen = ({ adjustedFFMI }) => {
+//ref for the chart element
   const chartRef = useRef(null);
 
+//useEffect hook to run code after component mounts
   useEffect(() => {
+//function to generate bell curve data
     const generateBellCurveData = (mean, standardDeviation) => {
       const data = [];
       const step = 0.1;
@@ -26,7 +33,7 @@ const BellCurveChartMen = ({ adjustedFFMI }) => {
     };
 
     const initializeChart = () => {
-      destroyChart(); // Destroy existing chart instance
+      destroyChart(); //destroy existing chart instance
 
       const ctx = chartRef.current.getContext('2d');
 
@@ -35,7 +42,7 @@ const BellCurveChartMen = ({ adjustedFFMI }) => {
 
       const bellCurveData = generateBellCurveData(mean, standardDeviation);
 
-      const adjustedDataIndex = bellCurveData.findIndex((data) => data.x >= adjustedFFMI); // Find the index of the data point with x >= adjustedFFMI
+      const adjustedDataIndex = bellCurveData.findIndex((data) => data.x >= adjustedFFMI); //find the index of the data point with x >= adjustedFFMI
 
       const chartConfig = {
         type: 'line',
@@ -54,13 +61,13 @@ const BellCurveChartMen = ({ adjustedFFMI }) => {
             {
               label: 'Adjusted FFMI',
               data: [{ x: adjustedFFMI, y: bellCurveData[adjustedDataIndex]?.y || 0 }],
-              backgroundColor: 'rgba(54, 162, 235, 1)', // Set the background color to match the curve line
-              borderColor: 'rgba(54, 162, 235, 1)', // Set the border color to match the curve line
+              backgroundColor: 'rgba(54, 162, 235, 1)', 
+              borderColor: 'rgba(54, 162, 235, 1)', 
               borderWidth: 2,
-              pointBackgroundColor: 'rgba(54, 162, 235, 1)', // Set the point background color to match the curve line
-              pointBorderColor: 'rgba(54, 162, 235, 1)', // Set the point border color to match the curve line
+              pointBackgroundColor: 'rgba(54, 162, 235, 1)', 
+              pointBorderColor: 'rgba(54, 162, 235, 1)', 
               pointRadius: 10,
-              pointHoverRadius: 15, // Increase the hover radius to make the point appear over the line
+              pointHoverRadius: 15, 
             },
           ],
         },
@@ -76,8 +83,8 @@ const BellCurveChartMen = ({ adjustedFFMI }) => {
                 display: true,
                 text: 'FFMI',
               },
-              min: mean - 3 * standardDeviation, // Adjust the min value based on the data range
-              max: mean + 3 * standardDeviation, // Adjust the max value based on the data range
+              min: mean - 3 * standardDeviation, //adjust the min value based on the data range
+              max: mean + 3 * standardDeviation, //adjust the max value based on the data range
             },
             y: {
               type: 'linear',
@@ -86,7 +93,7 @@ const BellCurveChartMen = ({ adjustedFFMI }) => {
                 display: true,
                 text: 'Probability Density',
               },
-              min: 0, // Adjust the min value based on the data range
+              min: 0, //adjust the min value based on the data range
             },
           },
           plugins: {
